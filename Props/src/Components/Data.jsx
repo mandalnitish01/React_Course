@@ -1,0 +1,59 @@
+const Data =[
+    {
+        id:1,
+        name:"nitish",
+        age:19,
+    },
+    {
+        id:2,
+        name:"om",
+        age:19,
+    },
+    {
+        id:3,
+        name:"sherrr",
+        age:19,
+    },
+    {
+        id:4,
+        name:"kashiyap",
+        age:19,
+    },
+    {
+        id:5,
+        name:"nitish Singh",
+        age:19,
+    },
+    {
+        id:6,
+        name:"Ayush",
+        age:19,
+    },
+    {
+        id:7,
+        name:"Ullah",
+        age:19,
+    },
+    {
+        id:8,
+        name:"Shivam",
+        age:19,
+    },
+    {
+        id:9,
+        name:"Atul",
+        age:19,
+    },
+    {
+        id:10,
+        name:"Vaibhav",
+        age:19,
+    },
+    {
+        id:11,
+        name:"Somil",
+        age:19,
+    }
+
+];
+export default Data;

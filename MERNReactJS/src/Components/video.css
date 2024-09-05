@@ -1,0 +1,46 @@
+.header{
+    font-family: sans-serif;
+    /* display: flex; */
+
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+  .images{
+    width: 360px;
+  }
+  .title{
+    color: white;
+  }
+  .date{
+    color: white;
+  }
+  .channel{
+    color: white;
+  }
+
+/* 
+
+
+    Removed semicolon here
+                   It is the worst method to render component
+                    <Videos
+                     title="React Projects"
+                     verify={true}
+                      View="999k"
+                     time="1 month ago"
+                  />
+                   <Videos
+                     title="Frontend Projects"
+                    verify={false}
+                 View="100k"
+                  time="2 months ago"
+                  />
+                 <Videos
+                    title="MERN Projects"
+                   verify={true}
+                  View="2M"
+                 time="1 year ago"
+                  /> 
+                   {</div> } }} */
