@@ -1,7 +1,8 @@
 import './AddVideo.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const InitialState = {
+
     verify: true,
     channel: "GullyCoder",
     title: '',
@@ -9,7 +10,7 @@ const InitialState = {
     time: '',
 }
 
-function AddVideos({ AddNewVideo }) {
+function AddVideos({ AddNewVideo, editableVideo }) {
 
     const [video, setVideos] = useState(InitialState)
 
@@ -17,7 +18,7 @@ function AddVideos({ AddNewVideo }) {
         e.preventDefault();
         AddNewVideo(video);
         setVideos(InitialState)
-        // console.log(video);
+        console.log(video);
     }
     function handelchange(e) {
         // console.log(e.target.name, e.target.value);
@@ -25,6 +26,14 @@ function AddVideos({ AddNewVideo }) {
             ...video,
             [e.target.name]: e.target.value
         });
+
+
+        useEffect(() => {
+            if (editableVideo) {
+                setVideos(editableVideo)
+            }
+        }, [editableVideo])
+        // in useeffect this [] array is dependency aray     
 
         // console.log(video)
     }

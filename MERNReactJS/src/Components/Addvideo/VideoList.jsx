@@ -1,6 +1,6 @@
 import Videos from '../Video'
 import PlayButton from '../PlayButton/PlayButton'
-function VideoList({videos}){
+function VideoList({videos,deleteVideo,editVideo}){
     return <>
     {videos.map((video) => (
           <Videos
@@ -11,6 +11,8 @@ function VideoList({videos}){
             time={video.time}
             image={video.image}
             id={video.id}
+            deleteVideo = {deleteVideo}
+            editVideo = {editVideo}
           >
 
             <PlayButton

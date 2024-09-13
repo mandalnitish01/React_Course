@@ -18,7 +18,7 @@ let videodetail = [
       verify: true,
       View: "999k",
       time: "5 month ago",
-      id : 4
+      id : 3
     },
   ];
   export default videodetail;

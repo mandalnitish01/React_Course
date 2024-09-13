@@ -7,14 +7,29 @@ export default function ({
   time,
   verify,
   id,
-  children
+  children,
+  deleteVideo,
+  editVideo
 }) {
   // let verified;
 
   return (
     <div className="wrapper" >
       <div className="header">
-        <img src={`https://picsum.photos/id/${id}/260/160`} alt="" />
+        <div className="buttonclass">
+          <div>
+            <button className="close" onClick={() => deleteVideo(id)}>X</button>
+          </div>
+          <div>
+            <button className="edit" onClick={() => editVideo(id)}>edit</button>
+          </div>
+
+        </div>
+
+        <div>
+          <img src={`https://picsum.photos/id/${id}/260/160`} alt="" />
+        </div>
+
         <div className="title">{title}</div>
         {/* 1 method  */}
         {/* <div>

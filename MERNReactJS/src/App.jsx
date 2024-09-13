@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { useEffect } from "react";
 import { useState } from "react";
 import videoDB from "./data/data";
 import Assignment from './Components/Assignment/ResumeBuilder';
@@ -16,13 +16,26 @@ function App() {
 
 // Both the state and function are used to render parent to child relation ship add video when we click on this 
   const [videos, setVideos] = useState(videoDB) //video data is comming
+  const [editableVideo, seteditableVideo] = useState(null) 
+
   function addvideos(video) {
     setVideos([...videos,
     { ...video, id: videos.length + 1 }
     ])
   }
 
+  function deleteVideo(id) {
+    // here the remove is the itteraor 
+    setVideos(videos.filter(remove=> remove.id !== id))
+    console.log(id)
+  }
+
+  function editVideo(id) {
+    seteditableVideo(videos.find(remove=> remove.id === id));
+  }
+
   return (
+    // state update hone ke baad return wala part rerendur hota hai 
     <div>
 
    
@@ -53,8 +66,10 @@ function App() {
 
 {/* component to component call (parent child relationship) */}
       <div>
-      <Addvideo AddNewVideo={addvideos} />
-      <VideoList videos={videos} />
+      {/* //it is a form control */}
+      <Addvideo AddNewVideo={addvideos} editableVideo = {editableVideo}/> 
+      {/* video control  */}
+      <VideoList editVideo={editVideo} deleteVideo={deleteVideo} videos={videos} />
       </div>
 
 
@@ -110,8 +125,6 @@ function App() {
 
    {/* <DropDown/> */}
       {/* <Resume/> */}
-
-
     </div>
   );
 }
