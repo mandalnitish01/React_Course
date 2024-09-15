@@ -24,6 +24,8 @@ function App() {
     ])
   }
 
+  
+
   function deleteVideo(id) {
     // here the remove is the itteraor 
     setVideos(videos.filter(remove=> remove.id !== id))
@@ -32,6 +34,7 @@ function App() {
 
   function editVideo(id) {
     seteditableVideo(videos.find(remove=> remove.id === id));
+    console.log(videos.find(remove=> remove.id === id))
   }
 
   return (

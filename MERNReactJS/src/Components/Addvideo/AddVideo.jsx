@@ -28,7 +28,7 @@ function AddVideos({ AddNewVideo, editableVideo }) {
         });
 
 
-        useEffect(() => {
+        useEffect(()=>{
             if (editableVideo) {
                 setVideos(editableVideo)
             }
