@@ -42,24 +42,22 @@ export default function Basics(){
  
 
 // destructuring the object and array 
-
-
 // #object 
-//   const id = 1;
-//   const productName = "Product Apple Watch";
-//   const rating = 5;
+  const id = 1;
+  const productName = "Product Apple Watch";
+  const rating = 5;
   
-//   const product = {
-//     // id:id,
-//     // productName:productName,
-//     // rating:rating,
-//     id,
-//     rating,
-//     productName
-//   };
-//   console.log(product);
+  const product = {
+    //This all are key value pairs
+    // id:id, 
+    // productName:productName,
+    // rating:rating,
+    id,
+    rating,
+    productName
+  };
+  console.log(product);
   
-
 
 //   const product2 = {
 //     description: "Product 2 description",
@@ -68,7 +66,7 @@ export default function Basics(){
 //     rating:"8.5",
 //   };
   
-//   the normal way to take things into object that is by using .method 
+//   the normal way to take things into object that is by using . method 
   // const getProductTwoDescription = product2.description;
   // console.log(getProductTwoDescription);
 //   the second thing and easy things is this 
@@ -141,33 +139,33 @@ export default function Basics(){
 
 
 
-const personsArray = [
-    {
-      name: "Person 0",
-      age: 45,
-      country: "USA",
-    },
-    {
-      name: "Person 1",
-      age: 30,
-      country: "USA",
-    },
-    {
-      name: "Person 2",
-      age: 40,
-      country: "RUSSIA",
-    },
-    {
-      name: "Person 3",
-      age: 50,
-      country: "INDIA",
-    },
-    {
-        name: "Person 4",
-        age: 19,
-        country: "INDIA",
-      },
-  ];
+// const personsArray = [
+//     {
+//       name: "Person 0",
+//       age: 45,
+//       country: "USA",
+//     },
+//     {
+//       name: "Person 1",
+//       age: 30,
+//       country: "USA",
+//     },
+//     {
+//       name: "Person 2",
+//       age: 40,
+//       country: "RUSSIA",
+//     },
+//     {
+//       name: "Person 3",
+//       age: 50,
+//       country: "INDIA",
+//     },
+//     {
+//         name: "Person 4",
+//         age: 19,
+//         country: "INDIA",
+//       },
+//   ];
 
   // map 
 // const newpersonsArray =  personsArray.map((Allperson,index)=>{
